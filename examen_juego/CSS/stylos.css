@@ -1,0 +1,29 @@
+div.niveles{
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0,0, 0, 0.2), 0 6px 20px 0 rgba(0,0, 0, 0.19);
+    text-align: center;
+    }
+
+div.contenedor
+    {
+        padding: 10px;
+        background-color: rgb(102, 240, 217);
+        color: white;
+    }
+    button
+    {
+        background-color: rgb(0, 0, 0);
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    body{
+        font-family: "Trebuchet MS";
+    }
+    h1{
+        color: rgb(0, 0, 0);
+    }

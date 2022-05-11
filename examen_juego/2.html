@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>juego2</title>
+    <link rel="stylesheet" href="CSS/stylos.css">
+</head>
+<body>
+      <div class="niveles">
+        <div class="contenedor">
+          <h1>BIENVENIDOS AL NIVEL INTERMEDIO</h1>
+          <h3>TIENES 10 INTENTOS</h3>
+          <div class="row-2">
+            <div class="col-2">
+              <button onclick="juego2()">EMPEZAR A JUGAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+     
+    <div class="volver">
+    <a href="inicio.html">VOLVER A LA PAGINA PRINCIPAL</a>
+    </div>
+ <script> 
+ function juego2(){
+var min = 1;
+var max = 50;
+var aleatorio = Math.floor(Math.random() * max - min + 1) + min;
+var intentos = 0 ;
+var nombre = prompt ('bienvenido al juego nivel 3 adivina el numero,cual es tu nombre? ');
+var numero ;
+
+ while ( intentos <10 ){
+     numero = parseInt(prompt(nombre+'  ,ingresa un numero entre el  '+min+' y el ' +max));
+     if(numero >= min && numero <=max){
+         if (numero < aleatorio){
+            alert('El numero que ingreso es mas bajo');
+         } else if (numero > aleatorio){
+             alert ('El numero que ingreso es mas alto');
+         } else if (numero == aleatorio)  {
+            break;
+         }
+     } 
+     else {
+         alert('Debe ingresar un numero entre '+min+' y '+max);
+     }
+     intentos++;
+ }
+ if (numero == aleatorio){
+     alert('FELICIDADES ADIVINASTE EL NUMERO EN '+(intentos + 1)+' intentos.');
+ }
+ else{
+     alert('Agotaste el numero de inetentos, suerte para la proxima!!');
+
+ }
+}
+</script>
+</body>
+</html>
